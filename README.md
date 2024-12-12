@@ -1,6 +1,4 @@
 # microgrid-optimization
-Repository for my final project in a graduate math class, Optimization, at UAF in Fall 2024.
-## Introduction 
 This repository contains code for optimizing load setpoints for generators on a microgrid containing diesel generators and a solar PV array. This optimiztion problem is formulated as a linear programming problem. Simplex method is used. 
 
 ## Contents
