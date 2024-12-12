@@ -5,6 +5,7 @@ function b = findb(D,S,ratings,r,K,L)
 %
 %%%%%%%%%%%%%%%%
     b = preprocess(D,S,r);
+    n = K*L;
     for k=1:K
         for l=1:L
             % i = l + L*(k-1);
