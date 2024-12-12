@@ -22,7 +22,8 @@ Note: If $s$ is solar output in kW, $q$, $0\le q\le 1$ is normalized solar produ
     - from https://github.com/bueler/opt/tree/main/assets/codes/F24
 - preprocess: preprocesses demand and solar PV array output
     - see Constraints below. 
-
+- genCurves: creates vector valued function representing generator fuel curves
+    - unused function, might be useful for other optimization techniques in future
 ### /scripts
 - optimize: main script that finds an optimum solution  
     - should be turned into a function soon... 
