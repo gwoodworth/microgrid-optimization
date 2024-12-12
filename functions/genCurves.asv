@@ -4,6 +4,7 @@ function g = genCurves(x,m,b,K,L)
     %specified by ratings above, and k is the number of generators
     %%%%%%%%%%
     g = m.*x+b;
+    
     for l=1:L
         sum = 0;
         for k=1:K

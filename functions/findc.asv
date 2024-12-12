@@ -1,0 +1,12 @@
+function c = findc(ratings,L)
+    K = length(ratings);
+    [m,b] = genSlopeYint(ratings);
+    c = zeros(K*L,1);
+    for k=1:K
+        for l=1:L
+            i = l + L(k-1);
+            c(i) = m(k);
+            b(i)
+        end
+    end
+end
