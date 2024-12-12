@@ -1,5 +1,5 @@
 # microgrid-optimization
-This repository contains code for optimizing load setpoints for generators on a microgrid containing diesel generators and a solar PV array. This optimiztion problem is formulated as a linear programming problem. Simplex method is used. 
+This repository contains code and example test data for optimizing load setpoints for generators on a microgrid containing diesel generators and a solar PV array. This optimiztion problem is formulated as a linear programming problem. Simplex method is used. 
 
 ## Contents
 There are seven helper functions, a script that runs the optimization, and two data sets. The data is from an example grid posted at https://github.com/gears1763-2/PGMcpp.
