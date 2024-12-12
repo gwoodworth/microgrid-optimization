@@ -10,7 +10,7 @@
 %Set parameters
 ratings = [100,150,250]; % Ratings for diesel generators in kW, one for each generator
 r = 250; %Total Solar PV array rating
-L = 168; %number of timesteps
+L = 24; %number of timesteps
 
 K = length(ratings); %number of diesel generators
 n = K*L; %problem dimension, 
@@ -29,4 +29,4 @@ b = findb(D,S,ratings,r,K,L);%Find b for Ax=b
 xBFS = [zeros(n-m,1);b]; %non-degenerate basic feasible solution using slack variables
 
 %run simplex
-[x,z,iters] = sfsimplex(c,A,b,xBFS,true,10);
+[x,z,iters] = sfsimplex(c,A,b,xBFS,false,10);
