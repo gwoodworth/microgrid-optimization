@@ -34,4 +34,4 @@ xBFS = phaseone(A,b);
 
 %Convert x and z back to original problem
 x_og = b(L+1:m)-x(n/2+1:n);
-z_og = z+sum(p);
+z_og = z+sp;
