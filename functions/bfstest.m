@@ -1,18 +1,18 @@
-function [L,foo,initialIters,iters] = bfstest(L)
+function [L,foo,initialIters,iters] = bfstest(L,TTD,TTS)
 %%%%%%%%%%%%%%%%%%%%
 %Function for testing if every result from phase one is an optimal BFS.
 %%%%%%%%%%%%%%%%%%%
-%load data, once per session
-if exist('TTD','var') == 0
-    TTD = readtimetable(...
-        'data/electrical_load_generic_peak-500kW_1yr_dt-1hr.csv'...
-        ); %Electrical demand as a timetable
-end
-if exist('TTS','var') == 0
-    TTS = readtimetable(...
-        'data/normalized_solar_production.csv'...
-        ); %Normalized solar array output for a year
-end
+% %load data, once per session
+% if exist('TTD','var') == 0
+%     TTD = readtimetable(...
+%         'data/electrical_load_generic_peak-500kW_1yr_dt-1hr.csv'...
+%         ); %Electrical demand as a timetable
+% end
+% if exist('TTS','var') == 0
+%     TTS = readtimetable(...
+%         'data/normalized_solar_production.csv'...
+%         ); %Normalized solar array output for a year
+% end
 %Set parameters
 ratings = [100,150,250]; % Ratings for diesel generators in kW, one for each generator
 r = 250; %Total Solar PV array rating
