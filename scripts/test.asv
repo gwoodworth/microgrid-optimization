@@ -1,0 +1,17 @@
+L=1;
+outliers = [];
+results = cell(L+1,4);
+results{1,1} = 'L';
+results{1,2} = 'T/F';
+results{}
+
+for l=1:L
+   [L,foo,initialIters,iters] = bfstest(l);
+   results{l,1} = L;
+   results{l,2} = foo;
+   results{l,3} = initialIters;
+   results{l,4} = iters;
+   if foo == false
+       outliers=[outliers, L];
+   end
+end
