@@ -12,7 +12,7 @@ if exist('TTS','var') == 0
         'data/normalized_solar_production.csv'...
         ); %Normalized solar array output for a year
 end
-L=10;
+L=168;
 outliers = [];
 results = cell(L+1,4);
 results{1,1} = 'L';

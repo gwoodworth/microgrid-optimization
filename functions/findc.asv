@@ -2,7 +2,7 @@ function [c,p] = findc(ratings,L)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Preprocessing function to produce c for use with simplex. 
 % Only c is necessary, but p might be useful at the end to get back to the
-% actual value of the objective function (f(x)=c^Tx+p?).
+% actual value of the objective function (z=c^Tx+p).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
     K = length(ratings);
     n = K*L;
@@ -16,4 +16,5 @@ function [c,p] = findc(ratings,L)
             p(i) = yInt(k);
         end
     end
+    p = sum(p);
 end
