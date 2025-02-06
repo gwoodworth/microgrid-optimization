@@ -27,6 +27,10 @@ Note: If $s$ is solar output in kW, $q$, $0\le q\le 1$ is normalized solar produ
     - should be turned into a function soon... 
     - requires user to set parameters by hand to load data correctly
     - see below for problem statement
+### presentation.pdf
+  - slides from a presentation of th project
+### project.pdf
+  - detailed project writeup for the Optimization class
 ## Problem 
 ### Objective Function 
 Let $K$ be the number of diesel generators and $L$ be the number of time steps we are optimizing over. The fuel consumption of each generator, $L/kWh$, is determined by a generic, linear fuel curve, $g_k(x_i)$ where $i=l+L(k-1)$ and $x_i$ is the setpoint of generator $k$ at timestep $l$. The objective function is the sum of fuel use by all generators $K$ over all time steps $L$. Then the objective is $$\text{minimize }\;f(x)=\sum_{l=1}^L\sum_{k=1}^Kg_k(x_{l+L(k-1)})=\sum_{l=1}^L\sum_{k=1}^Kg_k(x_i).$$ Note: The slopes and $y$-intercepts of the fuel curves are nonlinear functions of the rated maximum capacity of a generator. Specifically, given generator $k$ with maximum rated capacity $M_k$ in kW, $$g_k(x)=0.4234(M_k)^{-0.1012}x+0.0940\cdot (M_k)^{-0.2735}.$$  
@@ -37,5 +41,5 @@ where $\;\;i=l+L(k-1)$ for $\;l\in\{1,\dots,L\}.$
 
 Each generator $k$ has a maximum output of $M_k$, which we represent with the following $n=K\cdot L$ constraints $$x_i\le M_k$$ where $\;\;i=l+L(k-1)$ for $\;l\in\{1,\dots,L\}.$ Also, for all $i=1,\dots,n$, we have $$0\le x_i.$$
 
-Hence, we have $m=L+n$ general constraints and $n$ variables. In solving the problem, we convert to standard form, which will add $n$ variables. See project write up for details (coming soon...).
+Hence, we have $m=L+n$ general constraints and $n$ variables. In solving the problem, we convert to standard form, which will add $n$ variables. See project write up for details (project.pdf) 
 
